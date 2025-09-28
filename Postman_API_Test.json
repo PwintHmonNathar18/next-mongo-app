@@ -1,0 +1,144 @@
+{
+  "info": {
+    "name": "Next.js MongoDB API Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Product - Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{API_BASE}}/product",
+          "host": ["{{API_BASE}}"],
+          "path": ["product"]
+        }
+      }
+    },
+    {
+      "name": "Product - Create",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"code\": \"P001\",\n  \"name\": \"Sample Product\",\n  \"description\": \"A test product\",\n  \"price\": 99.99,\n  \"category\": \"<category_id>\"\n}"
+        },
+        "url": {
+          "raw": "{{API_BASE}}/product",
+          "host": ["{{API_BASE}}"],
+          "path": ["product"]
+        }
+      }
+    },
+    {
+      "name": "Product - Get By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{API_BASE}}/product/68c0eaad3bff350661ca3d01",
+          "host": ["{{API_BASE}}"],
+          "path": ["product", "68c0eaad3bff350661ca3d01"]
+        }
+      }
+    },
+    {
+      "name": "Product - Update",
+      "request": {
+        "method": "PUT",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"_id\": \"<product_id>\",\n  \"name\": \"Updated Product\",\n  \"price\": 79.99\n}"
+        },
+        "url": {
+          "raw": "{{API_BASE}}/product",
+          "host": ["{{API_BASE}}"],
+          "path": ["product"]
+        }
+      }
+    },
+    {
+      "name": "Product - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{API_BASE}}/product/<product_id>",
+          "host": ["{{API_BASE}}"],
+          "path": ["product", "<product_id>"]
+        }
+      }
+    },
+    {
+      "name": "Category - Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{API_BASE}}/category",
+          "host": ["{{API_BASE}}"],
+          "path": ["category"]
+        }
+      }
+    },
+    {
+      "name": "Category - Create",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Electronics\",\n  \"order\": 1\n}"
+        },
+        "url": {
+          "raw": "{{API_BASE}}/category",
+          "host": ["{{API_BASE}}"],
+          "path": ["category"]
+        }
+      }
+    },
+    {
+      "name": "Category - Get By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{API_BASE}}/category/<category_id>",
+          "host": ["{{API_BASE}}"],
+          "path": ["category", "<category_id>"]
+        }
+      }
+    },
+    {
+      "name": "Category - Update",
+      "request": {
+        "method": "PUT",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"_id\": \"<category_id>\",\n  \"name\": \"Updated Category\",\n  \"order\": 2\n}"
+        },
+        "url": {
+          "raw": "{{API_BASE}}/category",
+          "host": ["{{API_BASE}}"],
+          "path": ["category"]
+        }
+      }
+    },
+    {
+      "name": "Category - Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{API_BASE}}/category/<category_id>",
+          "host": ["{{API_BASE}}"],
+          "path": ["category", "<category_id>"]
+        }
+      }
+    }
+  ]
+}
